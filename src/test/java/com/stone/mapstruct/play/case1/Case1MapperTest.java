@@ -6,7 +6,6 @@ import com.stone.mapstruct.play.case1.payload.CarDto;
 import com.stone.mapstruct.play.case1.payload.DriverDto;
 import com.stone.mapstruct.play.case1.payload.KeyDto;
 import org.junit.jupiter.api.Test;
-import org.mapstruct.factory.Mappers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
