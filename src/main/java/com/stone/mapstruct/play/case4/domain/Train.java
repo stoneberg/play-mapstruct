@@ -8,6 +8,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Train {
-    private String name;
+    private String destination;
     private TrainType type;
+    private Long price;
+    private String feature;
 }

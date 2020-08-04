@@ -16,16 +16,24 @@ public abstract class TrainMapper {
      */
     @BeforeMapping
     protected void setTrainType(TrainDto trainDto, @MappingTarget Train train) {
-        if (trainDto.getName().equals("KTX")) {
+//        if (trainDto.getName().equals("KTX")) {
+//            train.setType(TrainType.KTX);
+//        } else if (trainDto.getName().equals("ITX")) {
+//            train.setType(TrainType.ITX);
+//        }
+        if (trainDto.getPrice() > 50000L) {
             train.setType(TrainType.KTX);
-        } else if (trainDto.getName().equals("ITX")) {
+        } else if (trainDto.getPrice() > 30000L) {
             train.setType(TrainType.ITX);
+        } else {
+            train.setType(TrainType.Mugunghwa);
         }
+
     }
 
     @AfterMapping
     protected void convertNameToUpperCase(@MappingTarget Train train) {
-        train.setName(train.getName().toLowerCase());
+        train.setFeature(train.getType().toString() + " For " + train.getDestination());
     }
 
     public abstract Train toTrainEntity(TrainDto trainDto);

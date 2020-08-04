@@ -10,5 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor(staticName = "of")
 @NoArgsConstructor
 public class TrainDto {
-    private String name;
+    private String destination;
+    private Long price;
 }

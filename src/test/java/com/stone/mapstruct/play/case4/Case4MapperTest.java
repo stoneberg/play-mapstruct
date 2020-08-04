@@ -24,7 +24,7 @@ public class Case4MapperTest {
     @DisplayName("before mapping after mapping test")
     void before_mapping_after_mapping_test() {
         // given
-        final TrainDto trainDto = TrainDto.of("KTX");
+        final TrainDto trainDto = TrainDto.of("Busan", 45000L);
 
         // when
         TrainMapper mapper = Mappers.getMapper(TrainMapper.class);
@@ -33,6 +33,6 @@ public class Case4MapperTest {
 
         // then
         assertNotNull(train);
-        assertThat(train.getName()).isEqualTo("ktx");
+        assertThat(train.getFeature()).isEqualTo("ITX For Busan");
     }
 }
