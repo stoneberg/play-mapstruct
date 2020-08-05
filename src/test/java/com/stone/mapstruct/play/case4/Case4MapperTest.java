@@ -16,6 +16,7 @@ public class Case4MapperTest {
 
     /**
      * Before, After 처리 테스트
+     * target 쪽에 Setter와 Getter가 모두 존재해야 한다.
      */
 
     private static final Logger log = LoggerFactory.getLogger(Case4MapperTest.class);

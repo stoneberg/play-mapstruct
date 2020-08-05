@@ -1,10 +1,11 @@
 package com.stone.mapstruct.play.case1.payload;
 
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 
 @Builder
-@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class KeyDto {
-    private final String serialId;
+    private String serialId;
 }
